@@ -1,6 +1,9 @@
 
 <?php
+$con=  mysqli_connect("127.0.0.1", "root","" , "landingpageform");
+mysqli_query($con,"SET CHARACTER SET 'utf8'");
 session_start();
+
 if(  isset($_POST["order"])  )
 {
 	date_default_timezone_set('Africa/Casablanca');  $datetime = date('m/d/Y h:i:s', time());  
