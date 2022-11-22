@@ -1,7 +1,7 @@
 
 <?php
-
-
+$con=  mysqli_connect("us-mm-auto-dca-06-b.cleardb.net", "b7d462fec6fcb7",  "f24d7521",  "heroku_2fbaf1692e307d7");
+mysqli_query($con,"SET CHARACTER SET 'utf8'");
 session_start();
 
 if(  isset($_POST["order"])  )
