@@ -1,7 +1,7 @@
 
 <?php
 $con=  mysqli_connect("127.0.0.1", "root","" , "landingpageform");
-mysqli_query($con,"SET CHARACTER SET 'utf8'");
+
 session_start();
 
 if(  isset($_POST["order"])  )
