@@ -9,7 +9,7 @@ $time=time();
 $count=mysqli_num_rows(mysqli_query( $con  , "select * from useronlinebarakachifae where session='$session'"));
 if($count==null)  mysqli_query( $con  , " INSERT INTO useronlinebarakachifae(session, time)VALUES('$session', '$time') ");    else     mysqli_query( $con  , " UPDATE useronlinebarakachifae SET time='$time' WHERE session = '$session' "); 
 $count_user=mysqli_num_rows(mysqli_query( $con  ,"SELECT * FROM useronlinebarakachifae"));
-mysqli_query( $con  , "DELETE FROM useronlinebarakachifae WHERE time<$time-600");
+mysqli_query( $con  , "DELETE FROM useronlinebarakachifae WHERE time<$time-10");
 echo "online = $count_user";
 
 
