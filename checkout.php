@@ -195,7 +195,7 @@ fbq('track', 'PageView');
 	
 	    <div class="col1a">  <div class="col1b">	
 		
-			        <div class="logoshipping"> <a href="index.php"><img src="img/logo.png" class="logo"  /></a> </div>			
+			        <div class="logoshipping"> <a href="index.php"><img src="img/siro/barakachifae1.jpg" class="logo"  /></a> </div>			
 					
 
 					<?php	

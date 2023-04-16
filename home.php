@@ -117,7 +117,7 @@ fbq('track', 'PageView');
 		<div class="col2a">  <div class="col2b"> 			 
 		 </div></div>			   
 		<div class="col3a">    <div class="col3b">
-				<a href="index.php">  <img src="img/logo.png" class="logo"  />	</a>    
+				<a href="index.php">  <img src="img/siro/barakachifae1.jpg" class="logo"  />	</a>    
 		</div></div> 		  
 		<div class="col4a">    <div class="col4b">
 				  <a style="display:none" class="search">   <i class="fas fa-search ">  </i> </a> 
@@ -189,7 +189,7 @@ fbq('track', 'PageView');
     <div class="row3">	
 	    <div class="col1"> 
 		   <div class="posimageheader"> 
-		       <img class="imgheader" src="img/headerr.jpg">
+		       <img class="imgheader" src="img/siro/barakachifae2.jpg">
 		   </div>
 		</div>			
 	</div>

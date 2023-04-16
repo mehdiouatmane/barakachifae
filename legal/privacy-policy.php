@@ -64,7 +64,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 				<div class="col2a">  <div class="col2b"> 			 
 				 </div></div>			   
 				<div class="col3a">    <div class="col3b">
-						<a href="../index.php">  <img src="../img/logo.png" class="logo"  />	</a>    
+						<a href="../index.php">  <img src="../img/siro/barakachifae1.jpg" class="logo"  />	</a>    
 				</div></div> 		  
 				<div class="col4a">    <div class="col4b">
 						  <a style="display:none" class="search">   <i class="fas fa-search ">  </i> </a> 
