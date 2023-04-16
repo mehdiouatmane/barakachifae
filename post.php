@@ -469,32 +469,32 @@ fbq('track', 'PageView');
 			<div class="reviews">
 				<div class="name">khdija<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
-				<div class="comment">شكرا</div>
 				<div class="date">20/05/2022</div> 
+				<div class="comment">شكرا</div>
 			</div>
 			</div>
 			<div class="item5 item"> 					
 			<div class="reviews">
 				<div class="name">fatima<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
+				<div class="date">20/05/2022</div>
 				<div class="comment">منتوج يستحق الشراء</div>
-				<div class="date">20/05/2022</div> 
 			</div>
 			</div>
 			<div class="item5 item"> 					
 			<div class="reviews">
 				<div class="name">karim<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
-				<div class="comment">الخدمة كانت ممتازة والمنتوج توصلت به جيدا</div>
 				<div class="date">20/05/2022</div> 
+				<div class="comment">الخدمة كانت ممتازة والمنتوج توصلت به جيدا</div>
 			</div>
 			</div>
 			<div class="item5 item"> 					
 			<div class="reviews">
 				<div class="name">yasin<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
-				<div class="comment">ساكرر الشراء مرة اخرى</div>
 				<div class="date">20/05/2022</div> 
+				<div class="comment">ساكرر الشراء مرة اخرى</div>
 			</div>
 			</div>			
 		</div>		 
