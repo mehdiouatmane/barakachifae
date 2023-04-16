@@ -467,40 +467,40 @@ fbq('track', 'PageView');
         <div class="carousel5  owl-carousel  owl-theme"> 	
 			<div class="item5 item"> 					
 			<div class="reviews">
-				<div class="name">Charlotte E Lee<img src="img/approval.png"> </div> 
+				<div class="name">khdija<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
-				<div class="comment">So far so good! I will update this after more treatments but so far I have used it three times, every 2 weeks and the hair growth is now very slow</div>
-				<div class="multimg"><img src="img/ntafatzrb/reviews1.jpg"></div>		
+				<div class="comment">شكرا</div>
+				<div class="multimg"></div>		
 				<div class="date">20/05/2022</div> 
 			</div>
 			</div>
 			<div class="item5 item"> 					
 			<div class="reviews">
-				<div class="name"> Charlotte <img src="img/approval.png"> </div> 
+				<div class="name">fatima<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
-				<div class="comment">It's helped so much get rid of the five o'clock dark shadow on my upper lip and chin. The hairs are much slower at growing back </div>
-				<div class="multimg"><img src="img/ntafatzrb/reviews2.jpg"><img src="img/ntafatzrb/reviews3.jpg"></div>		
-				<div class="date">24/06/2022</div> 
+				<div class="comment">منتوج يستحق الشراء</div>
+				<div class="multimg"></div>		
+				<div class="date">20/05/2022</div> 
 			</div>
-			</div> 	
+			</div>
 			<div class="item5 item"> 					
 			<div class="reviews">
-				<div class="name">Reyouf<img src="img/approval.png"> </div> 
+				<div class="name">karim<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
-				<div class="comment">it came in a very safe state, nothing was wrong at all, The product itself was new, all the accessorise were there and nothing was missing,</div>
-				<div class="multimg"><img src="img/ntafatzrb/reviews4.jpg"><img src="img/ntafatzrb/reviews5.jpg"></div>		
-				<div class="date">30/06/2022</div> 
+				<div class="comment">الخدمة كانت ممتازة والمنتوج توصلت به جيدا</div>
+				<div class="multimg"></div>		
+				<div class="date">20/05/2022</div> 
 			</div>
-			</div> 	
+			</div>
 			<div class="item5 item"> 					
 			<div class="reviews">
-				<div class="name">Mar<img src="img/approval.png"> </div> 
+				<div class="name">yasin<img src="img/approval.png"> </div> 
 				<div class="star"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> </div> 
-				<div class="comment">After the 4th treatment almost 95% of the hair is gone. Where were you all my life!  you have to stick to the instructions. Love it! </div>
-				<div class="multimg"><img src="img/ntafatzrb/reviews6.jpg"></div>		
-				<div class="date">05/06/2022</div> 
+				<div class="comment">ساكرر الشراء مرة اخرى</div>
+				<div class="multimg"></div>		
+				<div class="date">20/05/2022</div> 
 			</div>
-			</div> 				
+			</div>			
 		</div>		 
 	</div> 
 	
