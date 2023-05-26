@@ -105,19 +105,16 @@ les product
 
 
 <?php
+if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update product set  id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['IDD']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from product where id='".$_GET['IDD']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from product "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
-
-	if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update product set  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',   id='".$_POST['id']."',    img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['IDD']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-	if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from product where id='".$_GET['IDD']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-	if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from product "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
-
-
-	$result  =  mysqli_query(      $con   ,     "select * from product "           );
-	foreach($result as $row)	
-	{		
+$result  =  mysqli_query(      $con   ,     "select * from product "           );
+foreach($result as $row)	
+{		
+        $id= $row["id"];
 		$datetime= $row["datetime"];
-		$ip= $row["ip"];
-		$id= $row["id"];	
+		$ip= $row["ip"];			
 		$img= $row["img"];
 		$gallery= $row["gallery"];
 		$title= $row["title"];
@@ -127,32 +124,32 @@ les product
 		$color= $row["color"];					
 		$sizee= $row["sizee"];		
 		$shipping= $row["shipping"];				
-		$description= $row["description"];
-		
-	?>
+		$description= $row["description"];	
+	    ?>
 	    <form method="post"  action="?IDD=<?php echo $id ?>"    >
-            <input type="text"   value="<?php echo $datetime ?>"    name="datetime" /> <br/> 
-            <input type="text"   value="<?php echo $ip ?>"          name="ip" /><br/>
-			<input type="text"   value="<?php echo $id ?>"          name="id" /><br/>
-			<input type="text"   value="<?php echo $img ?>"         name="img" /><br/>
-			<input type="text"   value="<?php echo $gallery ?>"     name="gallery" /><br/>
-			<input type="text"   value="<?php echo $title ?>"       name="title" /><br/> 
-			<input type="text"   value="<?php echo $price1 ?>"      name="price1" /><br/>
-            <input type="text"   value="<?php echo $price2 ?>"      name="price2" /><br/> 			
-			<input type="text"   value="<?php echo $quantity ?>"    name="quantity" /><br/> 
-			<input type="text"   value="<?php echo $color ?>"       name="color" /><br/> 
-			<input type="text"   value="<?php echo $sizee ?>"       name="sizee" /><br/> 
-			<input type="text"   value="<?php echo $shipping ?>"    name="shipping" /><br/> 
-			<input type="text"   value="<?php echo $description ?>" name="description" /><br/> 
+		<input type="text"   value="<?php echo $id ?>"          name="id" /><br/>
+        <input type="text"   value="<?php echo $datetime ?>"    name="datetime" /> <br/> 
+        <input type="text"   value="<?php echo $ip ?>"          name="ip" /><br/>		
+		<input type="text"   value="<?php echo $img ?>"         name="img" /><br/>
+		<input type="text"   value="<?php echo $gallery ?>"     name="gallery" /><br/>
+		<input type="text"   value="<?php echo $title ?>"       name="title" /><br/> 
+		<input type="text"   value="<?php echo $price1 ?>"      name="price1" /><br/>
+        <input type="text"   value="<?php echo $price2 ?>"      name="price2" /><br/> 			
+		<input type="text"   value="<?php echo $quantity ?>"    name="quantity" /><br/> 
+		<input type="text"   value="<?php echo $color ?>"       name="color" /><br/> 
+		<input type="text"   value="<?php echo $sizee ?>"       name="sizee" /><br/> 
+		<input type="text"   value="<?php echo $shipping ?>"    name="shipping" /><br/> 
+		<input type="text"   value="<?php echo $description ?>" name="description" /><br/> 
 						
-			<input type="submit" value="update"  name="update"/>	
-            <input type="submit" value="delete"  name="delete"/>
+		<input type="submit" value="update"  name="update"/>	
+        <input type="submit" value="delete"  name="delete"/>
         </form>				
-  			<br/> <br/>	<br/>	<br/>	
-	<?php } ?>
-		    <form method="post"  action="?IDD=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clear"/>  </form>	
-		
-	<?php
+  		<br/> <br/>	<br/>	<br/>	
+	    <?php 
+} 
+        ?>
+		<form method="post"  action="?IDD=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clear"/>  </form>	
+        <?php
 ?>
 
 
@@ -194,50 +191,45 @@ les product
 les victime
 
 <?php
-
-
-	if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update orderclien set  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',   id='".$_POST['id']."',    img='".$_POST['img']."',     title='".$_POST['title']."',    	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	subtotal='".$_POST['subtotal']."',	  totalprice='".$_POST['totalprice']."',  totalitem='".$_POST['totalitem']."',      email='".$_POST['email']."',	firstname='".$_POST['firstname']."',	lastname='".$_POST['lastname']."',	address='".$_POST['address']."',	city='".$_POST['city']."',	country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."'        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-	if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-	if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update orderclien set id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',     title='".$_POST['title']."',    	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	subtotal='".$_POST['subtotal']."',	  totalprice='".$_POST['totalprice']."',  totalitem='".$_POST['totalitem']."',      email='".$_POST['email']."',	firstname='".$_POST['firstname']."',	lastname='".$_POST['lastname']."',	address='".$_POST['address']."',	city='".$_POST['city']."',	country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."'        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
  
-	$result  =  mysqli_query(      $con   ,     "select * from orderclien "           );
-	foreach($result as $row)	
-	{	
-	
-	
-		$datetime= $row["datetime"];
-		$ip= $row["ip"];
-		$id= $row["id"];	
-		$img= $row["img"];
-		$title= $row["title"];
-		$price1= $row["price1"];
-		$quantity= $row["quantity"];				
-		$color= $row["color"];					
-		$sizee= $row["sizee"];		
-		$shipping= $row["shipping"];				
-		$subtotal= $row["subtotal"];
-		$totalprice= $row["totalprice"]; 
-		$totalitem= $row["totalitem"];			
-		$email= $row["email"];		
-		$firstname= $row["firstname"];				
-		$lastname= $row["lastname"];			
-		$address= $row["address"];			
-		$city= $row["city"];			
-		$country= $row["country"];				
-		$postcode= $row["postcode"];					
-		$phone= $row["phone"];			
-		$nameoncard= $row["nameoncard"];			
-		$cardnumber= $row["cardnumber"];			
-		$expmm= $row["expmm"];			
-		$expyy= $row["expyy"];			
-		$cvv= $row["cvv"];			
-		
-	?>
-	    <form method="post"  action="?ID=<?php echo $id ?>"    >
-            <input type="text"   value="<?php echo $datetime ?>"    name="datetime" /> <br/> 
-            <input type="text"   value="<?php echo $ip ?>"          name="ip" /><br/>
+$result  =  mysqli_query(      $con   ,     "select * from orderclien "           );
+foreach($result as $row)	
+{		
+			$id= $row["id"];
+			$datetime= $row["datetime"];
+			$ip= $row["ip"];	
+			$img= $row["img"];
+			$title= $row["title"];
+			$price1= $row["price1"];
+			$quantity= $row["quantity"];				
+			$color= $row["color"];					
+			$sizee= $row["sizee"];		
+			$shipping= $row["shipping"];				
+			$subtotal= $row["subtotal"];
+			$totalprice= $row["totalprice"]; 
+			$totalitem= $row["totalitem"];			
+			$email= $row["email"];		
+			$firstname= $row["firstname"];				
+			$lastname= $row["lastname"];			
+			$address= $row["address"];			
+			$city= $row["city"];			
+			$country= $row["country"];				
+			$postcode= $row["postcode"];					
+			$phone= $row["phone"];			
+			$nameoncard= $row["nameoncard"];			
+			$cardnumber= $row["cardnumber"];			
+			$expmm= $row["expmm"];			
+			$expyy= $row["expyy"];			
+			$cvv= $row["cvv"];				
+	        ?>
+	        <form method="post"  action="?ID=<?php echo $id ?>"    >
 			<input type="text"   value="<?php echo $id ?>"          name="id" /><br/>
+            <input type="text"   value="<?php echo $datetime ?>"    name="datetime" /> <br/> 
+            <input type="text"   value="<?php echo $ip ?>"          name="ip" /><br/>		
 			<input type="text"   value="<?php echo $img ?>"         name="img" /><br/>
 			<input type="text"   value="<?php echo $title ?>"       name="title" /><br/> 
 			<input type="text"   value="<?php echo $price1 ?>"      name="price1" /><br/> 
@@ -265,11 +257,16 @@ les victime
 			<input type="submit" value="update"  name="update"/>	
             <input type="submit" value="delete"  name="delete"/>	
   			<br/> <br/>	
-	<?php } ?>
+	        <?php 
+} 
+            ?>
 		    <input type="submit" value="clear"  name="clear"/>
-		</form>	
-	<?php
+		    </form>	
+	        <?php
 ?>
+
+
+
 
 
 
@@ -278,28 +275,32 @@ les victime
 <br/><br/><br/><br/><br/>
 les victime avec codsms
 <?php 
-$result1  =  mysqli_query(      $con   ,     "select * from codesmsorderclien " ); 
-foreach($result1 as $row)	 
+if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update codesmsorderclien set  id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       totalitem='".$_POST['totalitem']."',    totalprice='".$_POST['totalprice']."',   email='".$_POST['email']."',    	firstname='".$_POST['firstname']."',	  lastname='".$_POST['lastname']."',  address='".$_POST['address']."',	city='".$_POST['city']."',		country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."',	codesms='".$_POST['codesms']."'	         where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from codesmsorderclien where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from codesmsorderclien "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+
+$result  =  mysqli_query(      $con   ,     "select * from codesmsorderclien " ); 
+foreach($result as $row)	 
 { 
-$id= $row["id"];
-$datetime= $row["datetime"]; 
-$ip= $row["ip"]; 
-$totalitem= $row["totalitem"]; 
-$totalprice= $row["totalprice"]; 
-$email= $row["email"]; 
-$firstname= $row["firstname"]; 
-$lastname= $row["lastname"]; 
-$address= $row["address"]; 
-$city= $row["city"]; 
-$country= $row["country"]; 
-$postcode= $row["postcode"]; 
-$phone= $row["phone"]; 
-$nameoncard= $row["nameoncard"]; 
-$cardnumber= $row["cardnumber"]; 
-$expmm= $row["expmm"]; 
-$expyy= $row["expyy"]; 
-$cvv= $row["cvv"]; 
-$codesms= $row["codesms"];                      
+	 $id= $row["id"];
+	 $datetime= $row["datetime"]; 
+	 $ip= $row["ip"]; 
+	 $totalitem= $row["totalitem"]; 
+	 $totalprice= $row["totalprice"]; 
+	 $email= $row["email"]; 
+	 $firstname= $row["firstname"]; 
+	 $lastname= $row["lastname"]; 
+	 $address= $row["address"]; 
+	 $city= $row["city"]; 
+	 $country= $row["country"]; 
+	 $postcode= $row["postcode"]; 
+	 $phone= $row["phone"]; 
+	 $nameoncard= $row["nameoncard"]; 
+	 $cardnumber= $row["cardnumber"]; 
+	 $expmm= $row["expmm"]; 
+	 $expyy= $row["expyy"]; 
+	 $cvv= $row["cvv"]; 
+	 $codesms= $row["codesms"];                      
      ?> 
 	 <form method="post"  action="?ID=<?php echo $id ?>" >  
 	 <input type="text"   value="<?php echo $id ?>"             name="id" /><br/> 
@@ -365,16 +366,13 @@ les message
 
 
 <?php
+if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update message set   id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',      img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from message where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from message "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
-
-	if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update message set  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',   id='".$_POST['id']."',    img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-	if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from message where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-	if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from message "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
-
-
-	$result  =  mysqli_query(      $con   ,     "select * from message "           );
-	foreach($result as $row)	
-	{	
+$result  =  mysqli_query(      $con   ,     "select * from message "           );
+foreach($result as $row)	
+{	
         $id= $row["id"];	
 		$datetime= $row["datetime"];
 		$ip= $row["ip"];
@@ -383,27 +381,26 @@ les message
 		$email= $row["email"];
 		$phone= $row["phone"];
 		$message= $row["message"];
-		
-		
-	?>
+        ?>
 	    <form method="post"  action="?ID=<?php echo $id ?>"    >
-			<input type="text"   value="<?php echo $id ?>"                  name="id" /><br/>
-            <input type="text"   value="<?php echo $datetime ?>"            name="datetime" /> <br/> 
-            <input type="text"   value="<?php echo $ip ?>"                  name="ip" /><br/>
-			<input type="text"   value="<?php echo $iplocationcity ?>"      name="iplocationcity" /><br/>
-			<input type="text"   value="<?php echo $name ?>"                name="name" /><br/>
-			<input type="text"   value="<?php echo $email ?>"               name="email" /><br/> 
-			<input type="text"   value="<?php echo $phone ?>"               name="phone" /><br/>
-			<input type="text"   value="<?php echo $message ?>"             name="message" /><br/>
+		<input type="text"   value="<?php echo $id ?>"                  name="id" /><br/>
+        <input type="text"   value="<?php echo $datetime ?>"            name="datetime" /> <br/> 
+        <input type="text"   value="<?php echo $ip ?>"                  name="ip" /><br/>
+		<input type="text"   value="<?php echo $iplocationcity ?>"      name="iplocationcity" /><br/>
+		<input type="text"   value="<?php echo $name ?>"                name="name" /><br/>
+		<input type="text"   value="<?php echo $email ?>"               name="email" /><br/> 
+		<input type="text"   value="<?php echo $phone ?>"               name="phone" /><br/>
+		<input type="text"   value="<?php echo $message ?>"             name="message" /><br/>
 						
-			<input type="submit" value="update"  name="update"/>	
-            <input type="submit" value="delete"  name="delete"/>
+		<input type="submit" value="update"  name="update"/>	
+        <input type="submit" value="delete"  name="delete"/>
         </form>				
-  			<br/> <br/>	<br/>	<br/>	
-	<?php } ?>
-		    <form method="post"  action="?ID=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clear"/>  </form>	
-		
-	<?php
+  		<br/> <br/>	<br/>	<br/>	
+	    <?php 
+} 
+	    ?>
+		<form method="post"  action="?ID=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clear"/>  </form>	
+        <?php
 ?>
 
 
