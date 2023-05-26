@@ -25,10 +25,19 @@ CREATE TABLE `product`
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `product` 
-(`id`, `datetime`, `ip`, `img`, `gallery`, `title`, `price1` , `price2`, `quantity`, `color`, `sizee`, `shipping` , `description`) 
+(`id`, `datetime`, `ip`, `img`, `gallery`, `title`, `price1`, `price2`, `quantity`, `color`, `sizee`, `shipping`, `description`) 
 VALUES
-(1, '11/01/2022 02:49:19', '129.932.323.32', 'ntafatzrb1.jpg', 'ntafatzrb1.jpg,ntafatzrb2.jpg,ntafatzrb3.jpg', 'title1',  '12' , '14' , '303' , 'ntafatzrb1.jpg,ntafatzrb2.jpg,ntafatzrb3.jpg'  , '12' , '0' , 'KJDFJKD FDFKJDFJ'),
-(2, '11/01/2022 03:49:19', '129.932.323.32', 'kask1.jpg'     , 'kask1.jpg,kask2.jpg,kask3.jpg'               , 'title2',  '43' , '50' , '100' , 'kask1.jpg,kask2.jpg,kask3.jpg'                 , '20' , '0' , 'KKKDK KKKKD');
+(235, '05/26/2023 02:26:56', '::1', 'siro3asalsoltan.jpg', 'siro3asalsoltan.jpg', 'عسل سلطان', '10', '12', '9', 'siro3asalsoltan.jpg', '0', '0', 'عسل سلطان'),
+(245, '05/26/2023 02:27:49', '::1', 'siro9olon3asabi.jpg', 'siro9olon3asabi.jpg', 'قلون عصبي', '10', '12', '9', 'siro9olon3asabi.jpg', '0', '0', 'قلون عصبي'),
+(255, '05/26/2023 02:28:35', '::1', 'sirobawasir.jpg', 'sirobawasir.jpg', 'البواسير', '10', '12', '9', 'sirobawasir.jpg', '0', '0', 'البواسير'),
+(265, '05/26/2023 02:29:38', '::1', 'siroma3idawaam3ad.jpg', 'siroma3idawaam3ad.jpg', 'المعدة والامعاء', '10', '12', '9', 'siroma3idawaam3ad.jpg', '0', '0', 'المعدة والامعاء'),
+(275, '05/26/2023 02:30:41', '::1', 'siromahlolchorb.jpg', 'siromahlolchorb.jpg', 'الضيقة والسعال', '10', '12', '9', 'siromahlolchorb.jpg', '0', '0', 'الضيقة والسعال'),
+(285, '05/26/2023 02:31:31', '::1', 'siromahlolhasasiya1.jpg', 'siromahlolhasasiya1.jpg,siromahlolhasasiya2.jpg', 'محلول الحساسية', '10', '12', '9', 'siromahlolhasasiya1.jpg,siromahlolhasasiya2.jpg', '0', '0', 'محلول الحساسية'),
+(295, '05/26/2023 02:32:18', '::1', 'siromotirlil9owa1.jpg', 'siromotirlil9owa1.jpg,siromotirlil9owa2.jpg', 'مثير القوة', '10', '12', '9', 'siromotirlil9owa1.jpg,siromotirlil9owa2.jpg', '0', '0', 'مثير القوة'),
+(305, '05/26/2023 02:32:57', '::1', 'siroprostat.jpg', 'siroprostat.jpg', 'البروستات', '10', '12', '9', 'siroprostat.jpg', '0', '0', 'البروستات'),
+(315, '05/26/2023 02:33:54', '::1', 'sirotabawollairadi.jpg', 'sirotabawollairadi.jpg,sirotabawollairadiatfal.jpg', 'تبول الارادي', '10', '12', '9', 'sirotabawollairadi.jpg,sirotabawollairadiatfal.jpg', '0', '0', 'تبول الارادي'),
+(325, '05/26/2023 02:34:28', '::1', 'sirotwkal.jpg', 'sirotwkal.jpg', 'التوكال', '10', '12', '9', 'sirotwkal.jpg', '0', '0', 'التوكال');
+
 
 
 
