@@ -199,9 +199,13 @@ fbq('track', 'PageView');
 					
 
 					<?php	
-                    $totalitem = 0;					
-					$totalpricee = 0;
-					$result  =  mysqli_query(      $con   ,    "select * from addtocart"          );
+					
+					function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	  $ip = get_ip();           
+                    $row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart  "    )   ) ; 
+                    $result  =  mysqli_query(      $con   ,     "select * from addtocart  where ip='".$ip."' "    );
+                    
+					$totalitem = 0;					
+					$totalpricee = 0;					
                     foreach($result as $row)	
                     {
 						$img =  $row["img"];
