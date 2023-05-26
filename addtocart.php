@@ -161,14 +161,14 @@ fbq('track', 'PageView');
                     <div class="addtocart">		
 					<?php
 
+					function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	  $ip = get_ip();           
 
 
                     if(isset($_POST['action']) && $_POST['action'] == "updatephp")    {  if(     mysqli_query( $con  ,  "  update addtocart set quantity='".$_POST['quantity']."'   where id='".$_POST['id']."'    "   )  )    {header("location:addtocart.php");} else { header("location:addtocart.php");}       } 
                     if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update addtocart set quantity='".$_POST['quantity']."'   where id='".$_GET['ID']."'     "   )  )    {header("location:addtocart.php");} else { header("location:addtocart.php");}       }
 					if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart where id='".$_GET['ID']."'    "   )  )                                        {header("location:addtocart.php");} else { header("location:addtocart.php");}      }	  
-					if(isset($_POST['clear']))   {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )                                                                      {header("location:addtocart.php");} else { header("location:addtocart.php");}        }	  
+					if(isset($_POST['clear']))   {	if(     mysqli_query( $con  ,  "  delete from addtocart where ip='".$ip."'  "   )  )                                                                      {header("location:addtocart.php");} else { header("location:addtocart.php");}        }	  
 
-					function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	  $ip = get_ip();           
                     $row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart  "    )   ) ; 
 	                $result  =  mysqli_query(      $con   ,     "select * from addtocart  where ip='".$ip."' "    );
                    
