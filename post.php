@@ -52,9 +52,7 @@ if( isset($_POST["addjsphp"]) )
 	}
 	else 
 	{
-
-		$result = mysqli_query(  $con  ,	"INSERT INTO addtocart ( idproduct , datetime ,  ip , img , title , price1 , quantity , color , sizee , shipping )    VALUES    (  '$idproduct' ,  '$datetime'    , '$ip' , '$img' , '$title' , '$price1' , '$quantity' , '$color' , '$sizee' , '$shipping'  )"   );            
-		 
+		$result = mysqli_query(  $con  ,	"INSERT INTO addtocart ( idproduct , datetime ,  ip , img , title , price1 , quantity , color , sizee , shipping )    VALUES    (  '$idproduct' ,  '$datetime'    , '$ip' , '$img' , '$title' , '$price1' , '$quantity' , '$color' , '$sizee' , '$shipping'  )"   );            		 
 		echo "<script> window.location.href = 'checkout.php'; </script>";		
 	}
 
