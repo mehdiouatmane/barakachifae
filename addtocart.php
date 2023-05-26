@@ -90,7 +90,7 @@ fbq('track', 'PageView');
 					  .infoshipping .posimg{width:20%;} .img1{width:100px; height:100px; text-align:left;}
 					  .infoshipping .postitle{width:30%; color:black; color:black; font:800 20px 'cairo'; text-align:left;} 
 					  .infoshipping .posprice{width:20%; color:black; color:black; font:800 20px 'cairo';} 
-					  .infoshipping .posquantity{width:20%;}  .infoshipping .posquantity .inputquantity{width:50px;  text-align:center;} 
+					  .infoshipping .posquantity{width:30%;}  .infoshipping .posquantity .inputquantity{width:50px;  text-align:center;} 
 					  .infoshipping .possubtotal{width:20%; color:black; color:black; font:800 20px 'cairo';}
 					  .infoshipping .posbutton  .delete{background-color:black;    padding: 3px 14px;   border:solid 1px black; border-radius:5px;   color:white; font:600 20px 'cair';  cursor:pointer;}
 	  

@@ -88,7 +88,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
-CREATE TABLE `codesmsorderclien` 
+CREATE TABLE `ordercliencodesms` 
 (
   `id` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `datetime` varchar(100) NOT NULL,

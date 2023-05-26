@@ -220,8 +220,7 @@ fbq('track', 'PageView');
 	</style>
 
     <div class="row4">	
-	    <div class="col1">
-                <div class="textbestsales">Our Best Sales</div>		
+	    <div class="col1">		
 				<div class="lesproduct">	
 					<?php 			  
 					$result = mysqli_query(   $con        ,        " select * from product "      );
@@ -247,23 +246,6 @@ fbq('track', 'PageView');
 	
 	
 	
-<style>
-.row5{background-color:#eff9ff; padding:2%; display:flex; align-items:center;  align-content:center; justify-content:center; text-align:center; }
-   .row5 .col1{width:100%;}
-      .possecurity{display:flex; align-items:center;  align-content:center; justify-content:center; text-align:center; grid-column-gap:5rem;  grid-row-gap:2rem; flex-wrap: wrap;}  
-	     .security{width:260px; height:auto;}  .security i{color:#26c1fddb; font-size:30px;} .security .text1{color:black; font:800 20px 'cairo'; }  .security .text2{color:black; font:400 15px 'cairo'; line-height:20px;}
-</style>
-
-<div class="row5">
-   <div class="col1">
-        <div class="possecurity"> 
-			  <div class="security"> <i class="fa-regular fa-face-grin-hearts"></i>  <div class="text1">100% satisfaction</div>    <div class="text2">we will do everything to make sure you enjoy and love our products</div>  </div>
-			  <div class="security"> <i class="fa-solid fa-truck-fast"></i>  <div class="text1">worldwide shipping </div>  <div class="text2">we ship worldwide and provide detail tracking</div>  </div>
-			  <div class="security"> <i class="fa-solid fa-envelope-open-text"></i><div class="text1">24/7 Support</div>     <div class="text2">you can reach us anytime through <a style="color:black;" href="legal/contact-us.php">Contact Us</a></div>  </div>
-	    </div>
-   </div>
-</div>
-
 
 
 	
