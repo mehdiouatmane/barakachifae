@@ -542,7 +542,7 @@ fbq('track', 'PageView');
 					<div> <a href="legal/contact-us.php">Contact us</a> </div>
 				</div>				
 			    <div class="footer">
-				   <div class="text"> CopyRight © 2022 - Bestfashop </div>
+				   <div class="text"> CopyRight © 2023 - Barakachifae </div>
 				</div>
 			</div></div>			
 	</div>
