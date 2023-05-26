@@ -193,7 +193,7 @@ foreach($result as $row)
 			$sizee= $row["sizee"];				
 			$shipping= $row["shipping"];		
 	        ?>
-	        <form method="post"  action="?ID=<?php echo $id ?>"    >
+	        <form method="post"  action="?IDO=<?php echo $id ?>"    >
 			<input type="text"   value="<?php echo $id ?>"            name="id" /><br/>
             <input type="text"   value="<?php echo $idproduct ?>"     name="idproduct" /> <br/> 
             <input type="text"   value="<?php echo $datetime ?>"      name="datetime" /><br/>		
