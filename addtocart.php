@@ -5,8 +5,6 @@ ob_start();
 session_start();
 
 
-
-
 if( isset($_POST['postoutputtotalitems'])  ) 
 {  
 	 $outputtotalitems = '';  
@@ -26,6 +24,9 @@ if( isset($_POST['postoutputtotalitems'])  )
 	 }      
 	 echo json_encode(      array(  'outputtotalitems'=> $outputtotalitems      )         );   exit;     
 } 
+
+
+
 
 ?>
 
@@ -90,7 +91,7 @@ fbq('track', 'PageView');
 					  .infoshipping .posimg{width:20%;} .img1{width:100px; height:100px; text-align:left;}
 					  .infoshipping .postitle{width:30%; color:black; color:black; font:800 20px 'cairo'; text-align:left;} 
 					  .infoshipping .posprice{width:20%; color:black; color:black; font:800 20px 'cairo';} 
-					  .infoshipping .posquantity{width:30%;}  .infoshipping .posquantity .inputquantity{width:50px;  text-align:center;} 
+					  .infoshipping .posquantity{width:40%;}  .infoshipping .posquantity .inputquantity{width:50px;  text-align:center;} 
 					  .infoshipping .possubtotal{width:20%; color:black; color:black; font:800 20px 'cairo';}
 					  .infoshipping .posbutton  .delete{background-color:black;    padding: 3px 14px;   border:solid 1px black; border-radius:5px;   color:white; font:600 20px 'cair';  cursor:pointer;}
 	  
@@ -161,14 +162,15 @@ fbq('track', 'PageView');
 					<?php
 
 
+
                     if(isset($_POST['action']) && $_POST['action'] == "updatephp")    {  if(     mysqli_query( $con  ,  "  update addtocart set quantity='".$_POST['quantity']."'   where id='".$_POST['id']."'    "   )  )    {header("location:addtocart.php");} else { header("location:addtocart.php");}       } 
                     if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update addtocart set quantity='".$_POST['quantity']."'   where id='".$_GET['ID']."'     "   )  )    {header("location:addtocart.php");} else { header("location:addtocart.php");}       }
-					if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart where id='".$_GET['ID']."'    "   )  )                                        {header("location:addtocart.php");} else { header("location:addtocart.php");}      }	  
+					if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart where ip='".$_GET['ID']."'    "   )  )                                        {header("location:addtocart.php");} else { header("location:addtocart.php");}      }	  
 					if(isset($_POST['clear']))   {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )                                                                      {header("location:addtocart.php");} else { header("location:addtocart.php");}        }	  
 
-                    
-	                $result  =  mysqli_query(      $con   ,     "select * from addtocart "           );
-                    $row= mysqli_fetch_assoc (  $result  ) ; 
+                    $row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart  "    )   ) ; 
+	                $result  =  mysqli_query(      $con   ,     "select * from addtocart  where ip='".$row["ip"]."' "    );
+                   
 			
 	             	$totalitem = 0;				
 					$totalpricee = 0;
