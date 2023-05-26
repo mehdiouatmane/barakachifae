@@ -212,7 +212,7 @@ foreach($result as $row)
 	        <?php 
 } 
             ?>
-		    <input type="submit" value="clear"  name="clearvictimeaddtocart"/>
+		    <input type="submit" value="clear"  name="clearavictimeddtocart"/>
 		    </form>	
 	        <?php
 ?>
@@ -229,10 +229,6 @@ foreach($result as $row)
 
 
 
-
-
-
-victimesanscodsms
 
 
 
