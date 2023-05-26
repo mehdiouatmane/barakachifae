@@ -198,14 +198,14 @@ fbq('track', 'PageView');
 			        <div class="logoshipping"> <a href="index.php"><img src="img/barakachifae1.jpg" class="logo"  /></a> </div>			
 					
 
-					<?php	
-					
+					<?php						
 					function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	  $ip = get_ip();           
                     $row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart  "    )   ) ; 
                     $result  =  mysqli_query(      $con   ,     "select * from addtocart  where ip='".$ip."' "    );
                     
 					$totalitem = 0;					
-					$totalpricee = 0;					
+					$totalpricee = 0;
+					
                     foreach($result as $row)	
                     {
 						$img =  $row["img"];
@@ -225,7 +225,7 @@ fbq('track', 'PageView');
 	
 						$totalitem = $totalitem + 1;	
 
-					?>
+					    ?>
 						<div class="infoproductmobile" >
 							<div class="imgtitleprice" >
 								<img class="img1" src="<?php echo $img; ?>"   >   
@@ -238,10 +238,14 @@ fbq('track', 'PageView');
 								<div class="shipping" >   <div>Shipping</div>   <div><?php echo $shipping ?></div>  </div>  
 							</div>							  
 						</div>	
-					<?php }	?>		
+					    <?php 
+					}	
+					    ?>		
 						<div  class="postotalmobile">	   <div class="totalmobile" >    <div>Total :</div>     <div><?php echo $totalprice ?>$ </div>     <input style="display:none;"   type="text"    value="<?php echo $totalprice ?>"       name="totalprice"    />       </div>	 </div>	
 						<input style="display:none;"   type="text"    value="<?php echo $totalitem ?>"       name="totalitem"    />  
-											
+						<?php
+						
+			            ?>				
                	
            
 
@@ -288,10 +292,13 @@ fbq('track', 'PageView');
 
 		
 		<div class="col2a">  <div class="col2b">
-					<?php	
+					<?php
+					function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	  $ip = get_ip();           
+                    $row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart  "    )   ) ; 
+                    $result  =  mysqli_query(      $con   ,     "select * from addtocart  where ip='".$ip."' "    );
+            					
                     $totalitem = 0;					
 					$totalpricee = 0;
-					$result  =  mysqli_query(      $con   ,    "select * from addtocart"          );
                     foreach($result as $row)	
                     {
 						$img =  $row["img"];
@@ -310,7 +317,7 @@ fbq('track', 'PageView');
 			            $totalprice= number_format( $totalpricee,  2);
 	
 						$totalitem = $totalitem + 1;	
-                    ?>
+                        ?>
 						<div class="infoproduct" >
 							<div class="imgtitleprice" >
 								<img class="img1" src="<?php echo $img; ?>"  >   
@@ -323,10 +330,13 @@ fbq('track', 'PageView');
 								<div class="shipping" >   <div>Shipping</div>   <div><?php echo $shipping ?></div>  </div>  
 							</div>				  
 						</div>	
-					<?php }	?>
+					   <?php 
+				    }	
+				       ?>
 						<div class="total" >  <div>Total :</div>  <div><?php echo $totalprice ?>$ </div>       </div>		
-				
-
+				       <?php 
+					   
+                       ?>
 
 
 
