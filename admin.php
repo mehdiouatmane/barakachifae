@@ -175,7 +175,7 @@ foreach($result as $row)
 <?php
 if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update addtocart set id='".$_POST['id']."',   idproduct='".$_POST['idproduct']."',  datetime='".$_POST['datetime']."',       ip='".$_POST['ip']."',     img='".$_POST['img']."',    	title='".$_POST['title']."',	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',		color='".$_POST['color']."',	sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."'       where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
 if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['clearaddtocart']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
  
 $result  =  mysqli_query(      $con   ,     "select * from addtocart "           );
@@ -193,7 +193,7 @@ foreach($result as $row)
 			$sizee= $row["sizee"];				
 			$shipping= $row["shipping"];		
 	        ?>
-	        <form method="post"  action="?IDO=<?php echo $id ?>"    >
+	        <form method="post"  action="?ID=<?php echo $id ?>"    >
 			<input type="text"   value="<?php echo $id ?>"            name="id" /><br/>
             <input type="text"   value="<?php echo $idproduct ?>"     name="idproduct" /> <br/> 
             <input type="text"   value="<?php echo $datetime ?>"      name="datetime" /><br/>		
@@ -212,7 +212,7 @@ foreach($result as $row)
 	        <?php 
 } 
             ?>
-		    <input type="submit" value="clear"  name="clear"/>
+		    <input type="submit" value="clear"  name="clearaddtocart"/>
 		    </form>	
 	        <?php
 ?>
