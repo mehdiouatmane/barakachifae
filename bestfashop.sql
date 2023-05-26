@@ -134,3 +134,19 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
+CREATE TABLE `message` 
+(
+  `id` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `datetime` varchar(100) NOT NULL,
+  `ip` varchar(100) NOT NULL,
+  `iplocationcity` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `message` varchar(100) NOT NULL
+) 
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+

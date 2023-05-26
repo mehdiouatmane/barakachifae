@@ -203,7 +203,7 @@ fbq('track', 'PageView');
 			</a>			   
 	    </div> </div>		   
 		<div class="col2a">    <div class="col2b">
-				<a href="index.php">  <img class="logo"  src="img/product/siro/barakachifae1.jpg"  />	</a>    
+				<a href="index.php">  <img class="logo"  src="img/barakachifae1.jpg"  />	</a>    
 		</div></div> 		  
 		<div class="col3a">    <div class="col3b">
 				  <a href="addtocart.php"  class="shoppcart"> <i class="fas fa-shopping-cart"></i> <span class="outputtotalitems"></span>	 </a>	     				  
