@@ -37,7 +37,7 @@ if( isset($_POST["addjsphp"]) )
     
 	$row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart WHERE idproduct='".$_POST['id']."'  and ip='".$_POST['ip']."'  "    )   ) ; 
 
-    if (  isset($row["idproduct"]) &&  isset($row["ip"]) && $_POST['id']=$row["idproduct"] &&  $_POST['ip']=$row["ip"] )
+    if (  isset($row["idproduct"]) &&  isset($row["ip"]) &&     $_POST['id']=$row["idproduct"] &&  $_POST['id']=$row["ip"] )
 	{
 		echo "<script>alert(' I already added it to my cart ')</script>";
 	}
