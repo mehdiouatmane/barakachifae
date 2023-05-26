@@ -172,7 +172,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 					<div> <a href="contact-us.php">Contact us</a> </div>
 				</div>				
 			    <div class="footer">
-				   <div class="text"> CopyRight © 2022 - Bestfashop </div>
+				   <div class="text"> CopyRight © 2022 - barakachifae </div>
 				</div>
 			</div></div>			
 	</div>

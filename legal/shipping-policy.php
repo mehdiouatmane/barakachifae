@@ -90,7 +90,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 				<div>Yes, Shipping is Free to all countries of the world. </div>
 
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> 1.HOW LONG WILL MY ORDER TAKE TO DISPATCHED? </div>
-				<div> We just need no longer than 1 to 3 business day to deal with your order. Please contact us firstly  contact@bestfashop.com .</div>
+				<div> We just need no longer than 1 to 3 business day to deal with your order. Please contact us firstly  contact@barakachifae.com .</div>
 
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> 2.HOW LONG WILL MY ORDER TAKE TO SHIP? </div>
 				<div> Usually shipping time takes 8~12 working days to arrive after dispatched. During rush days, please estimate extra 5 business days more than usual.</div>
@@ -100,10 +100,10 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 				<div> with the courier's details and your consignment number, this can be used to track your order.</div>
 
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> 4.CAN I CHANGE MY ADDRESS? </div>
-				<div> Please contact us contact@bestfashop.com before your item has been dispatched. </div>
+				<div> Please contact us contact@barakachifae.com before your item has been dispatched. </div>
 
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> 5.CAN I GET DELIVERY TO COUNTRIES OUTSIDE OF THE UK? </div>
-				<div> Please contact us contact@bestfashop.com to ask for the accurate reply. For further assistance please email our customer service department at contact@bestfashop.com.</div>
+				<div> Please contact us contact@barakachifae.com to ask for the accurate reply. For further assistance please email our customer service department at contact@barakachifae.com.</div>
 	        </div></div>
 		</div>
 
@@ -142,7 +142,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 					<div> <a href="contact-us.php">Contact us</a> </div>
 				</div>				
 			    <div class="footer">
-				   <div class="text"> CopyRight © 2022 - Bestfashop </div>
+				   <div class="text"> CopyRight © 2022 - barakachifae </div>
 				</div>
 			</div></div>			
 	</div>

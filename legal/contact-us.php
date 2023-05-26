@@ -159,7 +159,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 				    <div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> 	CONTACT US </div>
 					<div style="margin:2% 0% 0% 0%;"> Do you have any question? </div>
 					<div style="margin:2% 0% 0% 0%;">Contact our customer support team now!</div>
-					<div>Email: contact@bestfashop.com</div>
+					<div>Email: contact@barakachifae.com</div>
 					<div>Address:London , United Kingdom</div>
 					<div style="margin:5% 0% 0% 0%;">Or using the form bellow:</div>
 					    <div style="display:grid;">
@@ -204,7 +204,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 					<div> <a href="contact-us.php">Contact us</a> </div>
 				</div>				
 			    <div class="footer">
-				   <div class="text"> CopyRight © 2022 - Bestfashop </div>
+				   <div class="text"> CopyRight © 2022 - barakachifae </div>
 				</div>
 			</div></div>			
 	</div>

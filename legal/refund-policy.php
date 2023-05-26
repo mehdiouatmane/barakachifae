@@ -99,16 +99,16 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; ">  THE PRODUCT NEVER ARRIVED:  </div>
 				   <div> Our estimate of the shipping time is between 8-12 days, not counting the preparation and shipping of the products which is between 1 to 3 days, so please if your products have not arrived max 15 days Please give it more time up to 20 days max as there are some situations we cannot control like weather, mail delays and customs. If your products have not arrived after 25 days, we will give you a 100% refund instantly.  </div>
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> DAMAGED ON ARRIVAL: </div>
-				   <div> if your product arrived damaged, please take photos and videos and send them to our customer support at contact@bestfashop.com.  </div> 
+				   <div> if your product arrived damaged, please take photos and videos and send them to our customer support at contact@barakachifae.com.  </div> 
 				   <div> After verification of the support and confirmation of the case, you will have two options: we will send you a new product or give you a 100% refund.  </div> 
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> DEFECTIVE OR BROKEN MANUFACTURER AFTER USE :</div>
 					<div> You have 14 days after the arrival of your product to report any problem with your product, if the product does not work during this period or is defective, you can return it to us at your expense and we will refund  the amount. total per store credit so that you can reorder your new product.  </div>
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> CHANGE OF OPINION:</div>
-					<div> You have 14 days after receipt of your product to return it to us. if you want to process you need to contact us at contact@bestfashop.com we will send you a return address, please keep in mind that we only  accept returns for products that are not used, washed and need to be in their original packaging. </div>
+					<div> You have 14 days after receipt of your product to return it to us. if you want to process you need to contact us at contact@barakachifae.com we will send you a return address, please keep in mind that we only  accept returns for products that are not used, washed and need to be in their original packaging. </div>
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> EXCHANGE: </div>
-					<div> If you wish to exchange your product, you have 14 days after receiving it to do so. Please keep in mind that to exchange your product must be unused  and in its original packaging you will need to send it to us at your expense. Please contact our support at contact@bestfashop.com to help you with the process. </div>
+					<div> If you wish to exchange your product, you have 14 days after receiving it to do so. Please keep in mind that to exchange your product must be unused  and in its original packaging you will need to send it to us at your expense. Please contact our support at contact@barakachifae.com to help you with the process. </div>
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> WRONG PRODUCT:   </div>
-					<div> If you received the wrong product, you have 14 days to return it to us at your expense and we will give you a 100% refund.  If you need help you can contact us at contact@bestfashop.com - Fri 9 am to 5 pm.</div>			  
+					<div> If you received the wrong product, you have 14 days to return it to us at your expense and we will give you a 100% refund.  If you need help you can contact us at contact@barakachifae.com - Fri 9 am to 5 pm.</div>			  
 				<div style=" margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo'; "> CANCELLATION OF AN ORDER: </div>
 					<div> When we try to deliver the goods to our customers as quickly as possible, we will prepare the shipment for shipment from the moment the customer places the order. For this reason, we cannot accept any cancellation request after placing the order. Thanks for your understanding. </div>
 	        </div></div>
@@ -150,7 +150,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 					<div> <a href="contact-us.php">Contact us</a> </div>
 				</div>				
 			    <div class="footer">
-				   <div class="text"> CopyRight © 2022 - Bestfashop </div>
+				   <div class="text"> CopyRight © 2022 - barakachifae </div>
 				</div>
 			</div></div>			
 	</div>

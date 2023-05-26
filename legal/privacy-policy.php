@@ -87,7 +87,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 	<div class="row2">
 	   <div class="col1a"> <div class="col1b">
 			<div style=" margin:5% 0% 1% 0%;color:black; font:600 20px 'cairo'; "> PRIVACY POLICY </div>
-			<div>This Privacy Policy describes how bestfashop.com collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site. </div>
+			<div>This Privacy Policy describes how barakachifae.com collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site. </div>
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';"> COLLECTING PERSONAL INFORMATION </div>
 				<div> When you visit the Site, we collect certain information about your device, your interaction with the Site, and information necessary to process your purchases.  We may also collect additional information if you contact us for customer support.  In this Privacy Policy, we refer to any information that can uniquely identify an individual (including the  information below) as “Personal Information”.  See the list below for more information about what Personal Information we collect and why. </div>
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';">Device information  </div>
@@ -115,15 +115,15 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';">	Retention </div>
 				<div> When you place an order through our website, we will retain your Personal Information for our records unless and until you ask us to delete this information. </div>
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';">	GDPR  </div>
-				<div>If you are a resident of the EEA, you have the right to access the Personal  Information we hold about you, to port it to a new service, and to ask  that your Personal Information be corrected, updated, or erased. If you  would like to exercise these rights, please contact us through the  contact information below contact@bestfashop.com. Your  Personal Information will be initially processed in Ireland and then  will be transferred outside of Europe for storage and further  processing, including to Canada and the United States. For more  information on how data transfers comply with the GDPR, see Shopify’s  GDPR Whitepaper: https://help.shopify.com/en/manual/your-account/privacy/GDPR.  </div>
+				<div>If you are a resident of the EEA, you have the right to access the Personal  Information we hold about you, to port it to a new service, and to ask  that your Personal Information be corrected, updated, or erased. If you  would like to exercise these rights, please contact us through the  contact information below contact@barakachifae.com. Your  Personal Information will be initially processed in Ireland and then  will be transferred outside of Europe for storage and further  processing, including to Canada and the United States. For more  information on how data transfers comply with the GDPR, see Shopify’s  GDPR Whitepaper: https://help.shopify.com/en/manual/your-account/privacy/GDPR.  </div>
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';">		CCPA  </div>
-				<div> If you are a resident of California, you have the right to access the  Personal Information we hold about you (also known as the ‘Right to  Know’), to port it to a new service, and to ask that your Personal  Information be corrected, updated, or erased. If you would like to  exercise these rights, please contact us through the contact information  below contact@bestfashop.com. If  you would like to designate an authorized agent to submit these  requests on your behalf, please contact us at the address below.  </div>
+				<div> If you are a resident of California, you have the right to access the  Personal Information we hold about you (also known as the ‘Right to  Know’), to port it to a new service, and to ask that your Personal  Information be corrected, updated, or erased. If you would like to  exercise these rights, please contact us through the contact information  below contact@barakachifae.com. If  you would like to designate an authorized agent to submit these  requests on your behalf, please contact us at the address below.  </div>
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';">		COOKIES </div>
 				<div> A cookie is a small amount of information that’s downloaded to your  computer or device when you visit our Site. We use a number of different  cookies, including functional, performance, advertising, and social  media or content cookies. Cookies make your browsing experience better  by allowing the website to remember your actions and preferences (such  as login and region selection). This means you don’t have to re-enter  this information each time you return to the site or browse from one  page to another. Cookies also provide information on how people use the  website, for instance whether it’s their first time visiting or if they  are a frequent visitor. We use the following cookies to optimize your experience on our Site and to provide our services. </div>
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';">	CHANGES </div>
 				<div> We may update this Privacy Policy from time to time in order to reflect, for example, changes to  our practices or for other operational, legal, or regulatory reasons. </div>
 			<div style="margin:5% 0% 1% 0%; color:black; font:600 20px 'cairo';">	CONTACT </div>
-				<div> For more information about our privacy practices, if you have questions, or  if you would like to make a complaint, please contact us by e-mail at  contact@bestfashop.com   </div>
+				<div> For more information about our privacy practices, if you have questions, or  if you would like to make a complaint, please contact us by e-mail at  contact@barakachifae.com   </div>
 				<div> Last updated: 18/02/2022  </div>
 				<div> If you are not satisfied with our response to your complaint, you have the right to lodge your complaint with the relevant data protection authority. You can contact your local data protection authority here: ico.org.uk/make-a-complaint. </div>
 	  </div> </div>
@@ -163,7 +163,7 @@ html, body{ background-color:#ecf0f1;  padding:0; border:0; margin:0% 0%;  touch
 					<div> <a href="contact-us.php">Contact us</a> </div>
 				</div>				
 			    <div class="footer">
-				   <div class="text"> CopyRight © 2022 - Bestfashop </div>
+				   <div class="text"> CopyRight © 2022 - barakachifae </div>
 				</div>
 			</div></div>			
 	</div>
