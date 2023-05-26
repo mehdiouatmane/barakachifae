@@ -33,11 +33,12 @@ if( isset($_POST['postoutputtotalitems'])  )
 
 if( isset($_POST["addjsphp"]) )
 {
+		function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	$ip = get_ip();            $iplocation = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));       $iplocationcity= isset($iplocation['city']) ?  $iplocation['city'] : '';       $iplocationcountry= isset($iplocation['country']) ?  $iplocation['country'] : '';   $BROWSER  =  $_SERVER['HTTP_USER_AGENT'];	
 
     
-	$row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart WHERE idproduct='".$_POST['id']."'  and ip='".$_POST['ip']."'  "    )   ) ; 
+	$row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart WHERE idproduct='".$_POST['id']."'  and ip='".$ip."'  "    )   ) ; 
 
-    if (  isset($row["idproduct"])  &&     $_POST['id']=$row["idproduct"]  $_POST['id']=$row["ip"] )
+    if (  isset($row["idproduct"])  &&     $_POST['id']=$row["idproduct"]   )
 	{
 		echo "<script>alert(' I already added it to my cart ')</script>";
 	}
