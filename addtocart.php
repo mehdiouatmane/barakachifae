@@ -91,7 +91,7 @@ fbq('track', 'PageView');
 					  .infoshipping .posimg{width:20%;} .img1{width:100px; height:100px; text-align:left;}
 					  .infoshipping .postitle{width:30%; color:black; color:black; font:800 20px 'cairo'; text-align:left;} 
 					  .infoshipping .posprice{width:20%; color:black; color:black; font:800 20px 'cairo';} 
-					  .infoshipping .posquantity{width:40%;}  .infoshipping .posquantity .inputquantity{width:50px;  text-align:center;} 
+					  .infoshipping .posquantity{width:20%;}  .infoshipping .posquantity .inputquantity{width:50px;  text-align:center;} 
 					  .infoshipping .possubtotal{width:20%; color:black; color:black; font:800 20px 'cairo';}
 					  .infoshipping .posbutton  .delete{background-color:black;    padding: 3px 14px;   border:solid 1px black; border-radius:5px;   color:white; font:600 20px 'cair';  cursor:pointer;}
 	  
@@ -169,7 +169,9 @@ fbq('track', 'PageView');
 					if(isset($_POST['clear']))   {	if(     mysqli_query( $con  ,  "  delete from addtocart "   )  )                                                                      {header("location:addtocart.php");} else { header("location:addtocart.php");}        }	  
 
                     $row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart  "    )   ) ; 
-	                $result  =  mysqli_query(      $con   ,     "select * from addtocart  where ip='".$row["ip"]."' "    );
+						function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	
+						$ip = get_ip();           
+	                $result  =  mysqli_query(      $con   ,     "select * from addtocart  where ip='".$ip."' "    );
                    
 			
 	             	$totalitem = 0;				
