@@ -156,18 +156,6 @@ fbq('track', 'PageView');
   
   
   
-	<style>
-	.row0{ display:flex; align-items:center;  align-content:center; justify-content:center; text-align:center; }
-	   .row0 .col1{width:100%;}
-		  .freeshipping{background-color:black; color:white; font:800 15px 'cairo';  display:flex; align-items:center; justify-content:center; text-align:center; }
-	</style>  
-	<div class="row0">
-		<div class="col1">
-			 <div class="freeshipping"> Free Shipping</div>
-		</div>
-	</div> 
-
-
 
 
 	<style>
