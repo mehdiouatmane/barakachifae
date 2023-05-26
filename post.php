@@ -35,7 +35,7 @@ if( isset($_POST["addjsphp"]) )
 {
 
     
-	$row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart WHERE idproduct='".$_POST['id']."'  "    )   ) ; 
+	$row= mysqli_fetch_assoc (  mysqli_query(  $con   ,     "select * from addtocart WHERE idproduct='".$_POST['id']."'  and ip='".$_POST['ip']."'  "    )   ) ; 
 
     if (   isset($row["ip"])  &&  $_POST['ip']=$row["ip"] )
 	{
